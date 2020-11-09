@@ -1,11 +1,11 @@
 ------------------------------------------------------------------------------------------
---#File: TRNG.vhd
+--#File: QRNG.vhd
 --#Authors: Rodrigo Nogueira Wuerdig
 --#         Marcos L. L. Sartori
 --#
 --#Contact: rodrigo.wuerdig@acad.pucrs.br
 ------------------------------------------------------------------------------------------
---This Asynchronous Mousetrap Logic TRNG uses Fibonacci LFSRs with a 
+--This Asynchronous Mousetrap Logic QRNG uses Fibonacci LFSRs with a 
 --estimated period of 3.40282366920938463463374607431768211455 × 10^38 Async Cycles
 --
 --#expression: 
@@ -17,16 +17,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity TRNG is
+entity QRNG is
 	generic (DEPTH : integer := 6);
 	port (	
 		hold_in:	in std_logic;
 		freq: out std_logic;
 		reset_in:	in std_logic;
 		random_out:	out std_logic_vector(127 downto 0));
-end TRNG;
+end QRNG;
 
-architecture interface of TRNG is
+architecture interface of QRNG is
 signal intermediate: std_logic_vector(127 downto 0) := x"30061173151173993930061173151173";
 signal AA, BB, CC: std_logic_vector(1 downto 0);
 signal req,req_d: std_logic_vector(3 downto 0):= (others => '0');

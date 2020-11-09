@@ -1,11 +1,11 @@
 ------------------------------------------------------------------------------------------
---#File TRNG_top.vhd
+--#File QRNG_top.vhd
 --#Authors: Rodrigo Nogueira Wuerdig
 --#         Marcos L. L. Sartori
 --#
 --#Contact: rodrigo.wuerdig@acad.pucrs.br
 ------------------------------------------------------------------------------------------
---This Asynchronous Mousetrap Logic TRNG uses Fibonacci LFSRs with a 
+--This Asynchronous Mousetrap Logic QRNG uses Fibonacci LFSRs with a 
 --estimated period of 3.40282366920938463463374607431768211455 × 10^38 Async Cycles
 --
 --#expression: 
@@ -17,16 +17,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity TRNG_top is
+entity QRNG_top is
 	port (hold_in: in std_logic;
 		   rst: in std_logic;
 		   clk : in STD_LOGIC;-- 100Mhz clock on Basys 3 FPGA board
          an : out STD_LOGIC_VECTOR (3 downto 0);-- 4 Anode signals
          freq : out STD_LOGIC;-- 4 Anode signals
          led : out STD_LOGIC_VECTOR (6 downto 0));-- Cathode patterns of 7-ledment display);
-end TRNG_top;
+end QRNG_top;
 
-architecture interface of TRNG_top is
+architecture interface of QRNG_top is
 signal hold,reset,middle_freq: std_logic := '0';
 signal random: std_logic_vector(127 downto 0);
 signal displayed_number: STD_LOGIC_VECTOR (15 downto 0);
@@ -104,7 +104,7 @@ begin
 end process;
 
 
-TRNG: entity work.TRNG
+QRNG: entity work.QRNG
 port map (
 	hold_in  =>  hold,
 	freq => middle_freq,
