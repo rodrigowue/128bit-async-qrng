@@ -1,0 +1,19 @@
+NET "clk"  LOC = "A8"  ; # Bank = 0, Signal name = MCLK
+NET "rst"  LOC = "J13"  ; # Bank = 0, Signal name = BTN0
+
+NET "hold_in"  LOC = "N15"; 
+NET "hold_in" CLOCK_DEDICATED_ROUTE = FALSE; # Bank = 0, Signal name = MCLK
+NET "freq"  LOC = "T14"  ; # Bank = 0, Signal name = BTN0
+
+NET "an<0>"  LOC = "G14"  ; # Bank = 1, Signal name = AN1
+NET "an<1>"  LOC = "G12"  ; # Bank = 1, Signal name = AN1
+NET "an<2>"  LOC = "G13"  ; # Bank = 1, Signal name = AN2
+NET "an<3>"  LOC = "F12"  ; # Bank = 1, Signal name = AN3
+
+NET "led<6>"  LOC = "F13"  ; # Bank = 2, Signal name = LD1
+NET "led<5>"  LOC = "E13"  ; # Bank = 3, Signal name = LD2
+NET "led<4>"  LOC = "G15"  ; # Bank = 2, Signal name = LD3
+NET "led<3>"  LOC = "H13"  ; # Bank = 2, Signal name = LD4
+NET "led<2>"  LOC = "J14"  ; # Bank = 2, Signal name = LD5
+NET "led<1>"  LOC = "E14"  ; # Bank = 2, Signal name = LD6
+NET "led<0>"  LOC = "G16"  ; # Bank = 2, Signal name = LD0
