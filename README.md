@@ -2,12 +2,15 @@
 [128-bit] FPGA Implementation of a Asynchronous Quasi-Random Number Generator Using Linear-feedback Shift Registers and Mousetrap Logic <br>
 by: Rodrigo N. Wuerdig, Marcos L. L. Sartori, and Ney L. V. Calazans<br>
 
+
+<b>Goals</b><br>
+- Increase Entropy Through Time Displacement
+- Fully Digital High Variability Number Generator
+
 **Fig. I - Mousetrap Asynchronous QRNG Architecture** <br>
 <img src="architecture.png" width="50%" height="50%">
 
-<b>Goals</b><br>
-- Increase Entropy through Time Displacement
-- Fully Digital High Variability Number Generator
+
 
 <b>Test-Bench</b><br>
 This circuit was prototyped on a Nexys board equipped with a Xilinx XC3S200 Spartan-3 FPGA.
