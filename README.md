@@ -1,5 +1,5 @@
 # 128bit-async-qrng
-[128-bit] Asynchronous Quasi-Random Number Generator Using Linear-feedback Shift Registers and Mousetrap Logic <br>
+[128-bit] FPGA Implementation of a Asynchronous Quasi-Random Number Generator Using Linear-feedback Shift Registers and Mousetrap Logic <br>
 by: Rodrigo N. Wuerdig, Marcos L. L. Sartori, and Ney L. V. Calazans<br>
 
 **Fig. I - Mousetrap Asynchronous QRNG Architecture** <br>
